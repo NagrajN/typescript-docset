@@ -1,0 +1,10 @@
+{
+  "name": "typescript-docset",
+  "description": "TypeScript document generator",
+  "author": "nagrajn",
+  "version": "0.0.1",
+  "dependencies": {
+    "sequelize": "*",
+    "sqlite3": "*"
+  }
+}
