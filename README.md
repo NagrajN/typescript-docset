@@ -8,7 +8,15 @@ The docset is in TypeScript.docset directory. You can add this directly in Dash 
 
 ## Parser
 
-The parser directory contains a simple Java Script Parser that runs on Node. To run the parser use "npm install" for required dependencies and then "node parser.js". You don't need to run the parser unless you are trying to parse a new version of the specification or if you need to extend the current indexing.
+The parser directory contains a simple Java Script Parser that runs on Node. To run the parser use "npm install" for required dependencies and then "node parser.js". 
+
+You don't need to run the parser unless 
+
+(a) Regenerate Indexes
+
+(b) you are trying to parse a new version of the specification (expect breakage)
+
+(c) You need to extend the current indexing.
 
 ## Doc Set Sections
 
