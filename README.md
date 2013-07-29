@@ -2,11 +2,11 @@
 
 This is TypeScript DocSet with some indexing. The source of this Doc Set is the Microsoft TypeScript Specification. I built it so I can use the docset with Dash on my Mac.
 
-## Doc Set
+### Doc Set
 
-The docset is in TypeScript.docset directory. You can add this directly in Dash or similar tooling
+The docset is the TypeScript.docset directory. You can add this directly in Dash or similar tooling
 
-## Parser
+### Parser
 
 The parser directory contains a simple Java Script Parser that runs on Node. To run the parser use "npm install" for required dependencies and then "node parser.js". 
 
@@ -14,11 +14,11 @@ You don't need to run the parser unless you are ...
 
 (a) Regenerating Indexes
 
-(b) Parse a new version of the specification (expect breakage)
+(b) Parsing a new version of the specification (expect breakage)
 
-(c) Extend the existing indexing
+(c) Adding new indexing types
 
-## Doc Set Sections
+### Doc Set Sections
 
 There are two "sections" to the Doc Set
 
@@ -28,7 +28,9 @@ There are two "sections" to the Doc Set
 
 HAPPY TYPE SCRIPTING !!!
 
-## License
+### License
 
 Copyright (c) 2013 "nagrajn" Nagraj Naidu & contributors.
 MIT License
+
+TypeScript is a trademark of Microsoft Corporation.
