@@ -3,7 +3,7 @@ var fs = require('fs');
 var Sequelize = require('sequelize');
 var filePathDefault = '../TypeScript.docset/Contents/Resources/Documents/index.html';
 var sqlite3Default = '../TypeScript.docset/Contents/Resources/docSet.dsidx';
-var name, type, path, indexArr = [];
+var indexArr = [];
 
 filePathDefault = (!!process.argv[2]) ? process.argv[2] : filePathDefault;
 sqlite3Default = (!!process.argv[3]) ? process.argv[3] : sqlite3Default;
@@ -12,11 +12,12 @@ var fileData = fs.readFileSync(filePathDefault, {encoding : 'ascii'});
 fileData = fileData.replace(/[\r\n\t]*/g,'');
 
 function extract(regEx, docType) {
+	var name, type, path;
 	while(result = regEx.exec(fileData)) {
-		var path = result[0].match(/<a href="(#[\s\S]*?)">/)[1];
-		var tmp = result[0].match(/<span style='mso-no-proof:yes'>([\s\S]*?)<\/span>/g);
+		path = result[0].match(/<a href="(#[\s\S]*?)">/)[1];
+		tmp = result[0].match(/<span style='mso-no-proof:yes'>([\s\S]*?)<\/span>/g);
 		if (tmp) {
-			var name = result[0].match(/<span style='mso-no-proof:yes'>([\s\S]*?)<\/span>/g)[1].match(/[\s\S]*>([\s\S]*?)<\/[\s\S]*/)[1];
+			name = result[0].match(/<span style='mso-no-proof:yes'>([\s\S]*?)<\/span>/g)[1].match(/[\s\S]*>([\s\S]*?)<\/[\s\S]*/)[1];
 			indexArr.push({"name" : name,"type": docType,"path": "index.html" + path});
 		}
 	}
